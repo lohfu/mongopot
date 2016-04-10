@@ -1,0 +1,26 @@
+{
+  "name": "mongopot",
+  "version": "0.0.1",
+  "description": "A collection of MongoDB schemas, plugins and models.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lohfu/mongopot.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "schema",
+    "schemas",
+    "model",
+    "models"
+  ],
+  "author": "Linus Miller <lohfu@lohfu.io> (https://lohfu.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lohfu/mongopot/issues"
+  },
+  "homepage": "https://github.com/lohfu/mongopot#readme"
+}
