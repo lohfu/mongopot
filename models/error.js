@@ -1,24 +1,45 @@
-var mongoose = require('mongoose');
+'use strict';
 
-var ErrorSchema = new mongoose.Schema({
-	body: {},
-	columnNumber: Number,// non-standard, MDN
-	dateCreated: { type: Date, default: Date.now },
-	description: String,//
-	details: {},
-	fileName: String,// non-standard, MDN
-	ip: String,// non-standard, TCB
-	lineNumber: Number,// non-standard, MDN
-	method: String,
-	message: String,// standard
-	name: String,// standard
-	path: String,// non-standard, TCB - mainly used for 404 
-	query: {},
-	stack: String,// non-standard, MDN
-	status: Number,// non-standard, TCB
-	statusText: String,// non-standard, TCB - usually the same as message
-	user: String,// non-standard, TCB
-	xhr: Boolean,// non-standard, TCB
+const mongoose = require('mongoose');
+
+const ErrorSchema = new mongoose.Schema({
+  body: {},
+  // non-standard, MDN
+  columnNumber: Number,
+  // non-standard, TCB
+  dateCreated: { type: Date, default: Date.now },
+  // non-standard, TCB, Microsoft uses (has used?) is similarly to message
+  description: String,
+  // non-standard, TCB
+  details: {},
+  // non-standard, MDN
+  fileName: String,
+  // non-standard, TCB
+  ip: String,
+  // non-standard, MDN
+  lineNumber: Number,
+  // non-standard, TCB
+  method: String,
+  // standard
+  message: String,
+  // standard
+  name: String,
+  // non-standard, TCB - mainly used for 404
+  path: String,
+  // non-standard, TCB
+  query: {},
+  // non-standard, TCB
+  session: {},
+  // non-standard, MDN
+  stack: String,
+  // non-standard, TCB
+  status: Number,
+  // non-standard, TCB - usually the same as message
+  statusText: String,
+  // non-standard, TCB
+  user: String,
+  // non-standard, TCB
+  xhr: Boolean,
 });
 
 module.exports = mongoose.model('Error', ErrorSchema);
